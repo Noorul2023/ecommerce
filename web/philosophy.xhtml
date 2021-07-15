@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"  >
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+   
+    <head>
+        <title >PHILOSOPHY BOOKS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <style>
+ table, th, td {
+  border: 1px solid black;
+  border-color: black;   
+} 
+  body{
+                background-image: url("resources/images/arka2.jpg") ;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+</style>
+    </head>
+    <body  >
+ 
+
+     <div align="center" > <a href="index.xhtml">
+    <h:graphicImage  value="resources/images/logo.PNG"/></a></div>
+        <table style="width:100%" >
+       <tr>
+    <th> </th>
+    <th>ISBN</th>
+    <th>BOOK NAME</th>
+     <th>AUTHOR</th>
+     <th>PAPERS</th>
+     <th>PUBLISHER</th>
+     <th>LANGUAGE</th>
+     <th>PRICE</th>
+     <th> </th>
+     </tr>
+     <tr>
+    <td><h:graphicImage style="width:200px;height:200px;" value="resources/images/shopie.JPG"/></td>
+     <td>2212
+     </td>
+    <td>Sophie^s World</td>
+    <td>Jostein Gaarder</td>
+    <td>592</td>
+    <td>D PUB.</td>
+    <td>ENG</td>
+    <td>40.8 $</td> 
+    <td><h:form> <h:commandButton value="ADD BAKSET"  action="#{bookBean.bas()}" > 
+                <f:setPropertyActionListener target="#{bookBean.isbn}" value="2212" />
+            </h:commandButton>  
+            </h:form></td>
+    </tr>
+     <tr>
+    <td><h:graphicImage style="width:200px;height:200px;" value="resources/images/socrates.jpg"/></td>
+     <td>2313</td>
+    <td>Apología de Sócrates</td>
+    <td>Platon</td>
+    <td>220</td>
+    <td>A PUB.</td>
+    <td>ENG</td>
+    <td>20.9 $</td> 
+    <td><h:form > <h:commandButton value="ADD BAKSET"  action="#{bookBean.bas()}" >
+        <f:setPropertyActionListener target="#{bookBean.isbn}" value="2313" />
+              
+            </h:commandButton></h:form></td>
+    </tr>
+         <tr>
+             <td><h:graphicImage style="width:200px;height:200px;" value="resources/images/dev.JPG"/></td>
+             <td>2414</td>
+    <td>Devlet</td>
+    <td>Platon</td>
+    <td>372</td>
+    <td>C PUB.</td>
+    <td>TUR</td>
+    <td>60.04 $</td> 
+    <td><h:form  > <h:commandButton value="ADD BAKSET" action="#{bookBean.bas()}" > 
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="2414" />
+            </h:commandButton></h:form></td>
+    </tr>
+         <tr>
+       <td><h:graphicImage  style="width:200px;height:200px;" value="resources/images/ermis.jpg"/></td>
+     <td>2515</td>
+    <td>Ermiş</td>
+    <td>Halil Cibran</td>
+    <td>98</td>
+    <td>D PUB.</td>
+    <td>TUR</td>
+    <td>19.9 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}">
+                    <f:setPropertyActionListener target="#{bookBean.isbn}" value="2515" />
+            </h:commandButton></h:form></td>
+    </tr>
+          <tr>
+       <td><h:graphicImage  style="width:200px;height:200px;" value="resources/images/meczup.jpg"/></td>
+     <td>2616</td>
+    <td>Meczup</td>
+    <td>Halil Cibran</td>
+    <td>64</td>
+    <td>A PUB.</td>
+    <td>TUR</td>
+    <td>10.5 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="2616" />
+            </h:commandButton></h:form></td>
+    </tr>
+          <tr>
+       <td><h:graphicImage  style="width:200px;height:200px;" value="resources/images/pka.JPG"/></td>
+     <td>2717</td>
+    <td>Puslu Kıtalar Atlası</td>
+    <td>İhsan Oktay Anar</td>
+    <td>238</td>
+    <td>B PUB.</td>
+    <td>TUR</td>
+    <td>8.6 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="2717" />
+            </h:commandButton></h:form></td>
+    </tr>
+  
+</table> 
+  <div align="center">  
+             <div align="center"  >
+                 <h3><p align = "center" style="font-family:courier;">Follow us on our social media accounts</p></h3>
+             </div>
+            <h:panelGrid  columns="3" style="height: 20px; width:90px" >
+                <h:graphicImage style="width:128px;height:128px;" value="resources/images/facebook.jpg" />
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/instagram.png"/>
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/linkedin.jpg"/>
+                <h:outputLink style="color: black"  value="https://www.facebook.com/" >  FACEBOOK    </h:outputLink>
+                <h:outputLink style="color: black" value="https://www.instagram.com/gulgul_27/" > INSTAGRAM   </h:outputLink>
+                <h:outputLink style="color: black" value="linkedin.com/in/gülşen-kılıç-8ba91316b" > LINKEDIN    </h:outputLink>                       
+                 </h:panelGrid>
+         </div>
+       
+    </body>
+</html>

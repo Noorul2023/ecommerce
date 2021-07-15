@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"  >
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title >HISTORY BOOKS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+ table, th, td {
+  border: 1px solid black;
+  border-color: black;   
+} 
+  body{
+                background-image: url("resources/images/arka2.jpg") ;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+</style>
+    </head>
+    <body  >
+ 
+
+     <div align="center" > <a href="index.xhtml">
+    <h:graphicImage  value="resources/images/logo.PNG"/></a></div>
+        <table style="width:100%" >
+       <tr>
+    <th> </th>
+    <th>ISBN</th>
+    <th>BOOK NAME</th>
+     <th>AUTHOR</th>
+     <th>PAPERS</th>
+     <th>PUBLISHER</th>
+     <th>LANGUAGE</th>
+     <th>PRICE</th>
+     <th> </th>
+     </tr>
+     <tr>
+    <td><h:graphicImage style="width:200px;height:200px;" value="resources/images/historyoftheworld.jpg"/></td>
+     <td>1606</td>
+    <td>History of the World Map by Map</td>
+    <td>DK</td>
+    <td>440</td>
+    <td>A PUB.</td>
+    <td>ENG</td>
+    <td>4.8 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="1606" />
+            </h:commandButton></h:form></td>
+    </tr>
+     <tr>
+    <td><h:graphicImage style="width:200px;height:200px;" value="resources/images/sahvesultan.jpg"/></td>
+     <td>1707</td>
+    <td>Şah ve Sultan</td>
+    <td>İskender Pala</td>
+    <td>390</td>
+    <td>A PUB.</td>
+    <td>TUR</td>
+    <td>19.8 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="1707" />
+            </h:commandButton></h:form></td>
+    </tr>
+         <tr>
+             <td><h:graphicImage style="width:200px;height:200px;" value="resources/images/od.jpg"/></td>
+     <td>1808</td>
+    <td>OD</td>
+    <td>İskender Pala</td>
+    <td>361</td>
+    <td>C PUB.</td>
+    <td>TUR</td>
+    <td>30.1 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="1808" />
+            </h:commandButton></h:form></td>
+    </tr>
+         <tr>
+       <td><h:graphicImage  style="width:200px;height:200px;" value="resources/images/efsane.jpg"/></td>
+     <td>1909</td>
+    <td>Efsane</td>
+    <td>İskender Pala</td>
+    <td>400</td>
+    <td>C PUB.</td>
+    <td>TUR</td>
+    <td>20.0 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="1909" />
+            </h:commandButton></h:form></td>
+    </tr>
+          <tr>
+       <td><h:graphicImage  style="width:200px;height:200px;" value="resources/images/itiraf.jpg"/></td>
+     <td>2010</td>
+    <td>İtiraf</td>
+    <td>İskender Pala</td>
+    <td>248</td>
+    <td>B PUB.</td>
+    <td>TUR</td>
+    <td>60.9 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="2010" />
+            </h:commandButton></h:form></td>
+    </tr>
+          <tr>
+       <td><h:graphicImage  style="width:200px;height:200px;" value="resources/images/thecountryofwhite.jpg"/></td>
+     <td>2111</td>
+    <td>Finland, The Country of White Lilies</td>
+    <td>Grigory	Petrov</td>
+    <td>111</td>
+    <td>B PUB.</td>
+    <td>ENG</td>
+    <td>20.25 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="2111" />
+            </h:commandButton></h:form></td>
+    </tr>
+  
+</table> 
+  <div align="center">  
+             <div align="center"  >
+                 <h3><p align = "center" style="font-family:courier;">Follow us on our social media accounts</p></h3>
+             </div>
+            <h:panelGrid  columns="3" style="height: 20px; width:90px" >
+                <h:graphicImage style="width:128px;height:128px;" value="resources/images/facebook.jpg" />
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/instagram.png"/>
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/linkedin.jpg"/>
+                <h:outputLink style="color: black"  value="https://www.facebook.com/" >  FACEBOOK    </h:outputLink>
+                <h:outputLink style="color: black" value="https://www.instagram.com/gulgul_27/" > INSTAGRAM   </h:outputLink>
+                <h:outputLink style="color: black" value="linkedin.com/in/gülşen-kılıç-8ba91316b" > LINKEDIN    </h:outputLink>                       
+                 </h:panelGrid>
+         </div>
+       
+    </body>
+</html>

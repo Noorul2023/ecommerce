@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"  >
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Total Quantity Order: </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+ table, th, td {
+  border: 1px solid black;
+  border-color: black;   
+} 
+body{
+                background-image: url("resources/images/arka2.jpg") ;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+</style>
+    </head>
+    <body>
+     <div align="center" > <a href="index.xhtml">
+    <h:graphicImage  value="resources/images/logo.PNG"/></a></div>
+        
+<div align="center">
+         <h2> THOSE WHO ORDERED PRODUCTS IN THE RANGE YOU ENTERED IN TOTAL</h2>  
+    <h:dataTable value="#{customersBean.quantityordernumber()}" var="myvariable3"    
+ border="0" cellpadding="10" cellspacing="3" >
+            
+  <h:column> 
+<f:facet name="header">FIRST NAME </f:facet>
+#{myvariable3.firstname}
+</h:column>
+ <h:column>
+ <f:facet name="header">LAST NAME</f:facet>
+ #{myvariable3.lastname}
+  </h:column>
+ <h:column>
+ <f:facet name="header">TOTAL QUANTITY</f:facet>
+ #{myvariable3.total}
+ </h:column>
+     
+ 
+       </h:dataTable>
+    
+ <h:form > <h:commandButton value="BACK"  action="report">
+     
+       
+     </h:commandButton></h:form>
+
+</div>
+       <div align="center">  
+             <div align="center"  >
+                 <h3><p align = "center" style="font-family:courier;">Follow us on our social media accounts</p></h3>
+                 <h:graphicImage style="width:200px;height:128px;" value="resources/images/logo.PNG"/></div>
+            <h:panelGrid  columns="3" style="height: 20px; width:90px ; border-bottom-color: white" >
+                <h:graphicImage style="width:128px;height:128px;" value="resources/images/facebook.jpg" />
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/instagram.png"/>
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/linkedin.jpg"/>
+                <h:outputLink style="color: red; border-width:200px" value="https://www.facebook.com/" >  FACEBOOK    </h:outputLink>
+                <h:outputLink style="color: red" value="https://www.instagram.com/gulgul_27/" > INSTAGRAM   </h:outputLink>
+                <h:outputLink style="color: red" value="linkedin.com/in/gülşen-kılıç-8ba91316b" > LINKEDIN    </h:outputLink>                       
+                 </h:panelGrid>
+         </div> 
+        
+    </body>
+</html>

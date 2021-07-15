@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"  >
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+   
+    <head>
+        <title >DEDECTIVE BOOKS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+ table, th, td {
+  border: 1px solid black;
+  border-color: black;   
+} 
+  body{
+                background-image: url("resources/images/arka2.jpg") ;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+</style>
+    </head>
+    <body  >
+ 
+
+     <div align="center" > <a href="index.xhtml">
+    <h:graphicImage  value="resources/images/logo.PNG"/></a></div>
+        <table style="width:100%" >
+       <tr>
+    <th> </th>
+    <th>ISBN</th>
+    <th>BOOK NAME</th>
+     <th>AUTHOR</th>
+     <th>PAPERS</th>
+     <th>PUBLISHER</th>
+     <th>LANGUAGE</th>
+     <th>PRICE</th>
+     <th> </th>
+     </tr>
+     <tr>
+    <td><h:graphicImage style="width:200px;height:200px;" value="resources/images/amomento.JPG"/></td>
+     <td>1000</td>
+    <td>A Momento For İstanbul</td>
+    <td>Ahmet Ümit</td>
+    <td>580</td>
+    <td>A PUB.</td>
+    <td>ENG</td>
+    <td>19.9 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="1000" />
+            </h:commandButton></h:form></td>
+    </tr>
+     <tr>
+    <td><h:graphicImage style="width:200px;height:200px;" value="resources/images/tokill.JPG"/></td>
+     <td>1101</td>
+    <td>To Kill Sultan</td>
+    <td>Ahmet Ümit</td>
+    <td>646</td>
+    <td>B PUB.</td>
+    <td>ENG</td>
+    <td>20.5 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="1101" />
+            </h:commandButton></h:form></td>
+    </tr>
+         <tr>
+             <td><h:graphicImage style="width:200px;height:200px;" value="resources/images/andthentherewerenone.jpg"/></td>
+     <td>1202</td>
+    <td>And Then There Were None</td>
+    <td>Agatha Christie</td>
+    <td>300</td>
+    <td>B PUB.</td>
+    <td>ENG</td>
+    <td>10.6 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="1202" />
+            </h:commandButton></h:form></td>
+    </tr>
+         <tr>
+       <td><h:graphicImage  style="width:200px;height:200px;" value="resources/images/TheMysteriousAffair.jpg"/></td>
+     <td>1303</td>
+    <td>The Mysterious Affair at Styles: The First Hercule Poirot Mystery</td>
+    <td>Agatha Christie</td>
+    <td>224</td>
+    <td>C PUB.</td>
+    <td>ENG</td>
+    <td>21.25 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="1303" />
+            </h:commandButton></h:form></td>
+    </tr>
+          <tr>
+       <td><h:graphicImage  style="width:200px;height:200px;" value="resources/images/SherlockHolmesTheCompleteCollection.jpg"/></td>
+     <td>1404</td>
+    <td>Sherlock Holmes: The Complete Collection</td>
+    <td>Arthur Conan Doyle</td>
+    <td>887</td>
+    <td>D PUB.</td>
+    <td>ENG</td>
+    <td>10.9 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="1404" />
+            </h:commandButton></h:form></td>
+    </tr>
+          <tr>
+       <td><h:graphicImage  style="width:200px;height:200px;" value="resources/images/adventure.JPG"/></td>
+     <td>1505</td>
+    <td>Sherlock Holmes : The Adventure Of The Resident Patient</td>
+    <td>Arthur Conan Doyle</td>
+    <td>232</td>
+    <td>A PUB.</td>
+    <td>ENG</td>
+    <td>9.9 $</td> 
+    <td><h:form  > <h:commandButton  value="ADD BAKSET" action="#{bookBean.bas()}" >
+            <f:setPropertyActionListener target="#{bookBean.isbn}" value="1505" />
+            </h:commandButton></h:form></td>
+    </tr>
+  
+</table> 
+  <div align="center">  
+             <div align="center"  >
+                 <h3><p align = "center" style="font-family:courier;">Follow us on our social media accounts</p></h3>
+             </div>
+            <h:panelGrid  columns="3" style="height: 20px; width:90px" >
+                <h:graphicImage style="width:128px;height:128px;" value="resources/images/facebook.jpg" />
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/instagram.png"/>
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/linkedin.jpg"/>
+                <h:outputLink style="color: black"  value="https://www.facebook.com/" >  FACEBOOK    </h:outputLink>
+                <h:outputLink style="color: black" value="https://www.instagram.com/gulgul_27/" > INSTAGRAM   </h:outputLink>
+                <h:outputLink style="color: black" value="linkedin.com/in/gülşen-kılıç-8ba91316b" > LINKEDIN    </h:outputLink>                       
+                 </h:panelGrid>
+         </div>
+       
+    </body>
+</html>

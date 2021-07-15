@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"  >
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>BASKET   </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      
+ 
+        <style>
+ table, th, td {
+  border: 1px solid black;
+  border-color: black;
+ }
+
+            body{
+                background-image: url("resources/images/man.jpg") ;
+                background-repeat: no-repeat;
+                 background-size: cover;
+            }
+     
+    
+</style>
+    </head>
+    <body>
+     <div align="center" > 
+    <h:graphicImage  value="resources/images/logo.PNG"/></div>
+     <div align="center">  
+         <h2> THE BOOK YOU ARE LOOKING FOR </h2>      
+         <h:dataTable value="#{bookBean.basket()}" var="myvariable"    
+                      border="0" cellpadding="10" cellspacing="3"   >
+           
+  <h:column> 
+<f:facet name="header">ISBN</f:facet>
+#{myvariable.isbn}
+</h:column>
+ <h:column>
+ <f:facet name="header">BOOK NAME</f:facet>
+ #{myvariable.bookName}
+  </h:column>
+ 
+ <h:column>
+ <f:facet name="header">PRICE</f:facet>
+ #{myvariable.price}
+ </h:column>
+             
+ <h:column>
+ <f:facet name="header"> </f:facet>
+ <h:form > <h:commandButton value="REMOVE BAKSET"  action="#{bookBean.remove()}" >
+          <f:setPropertyActionListener target="#{bookBean.isbn}" value="#{myvariable.isbn}" />
+     </h:commandButton>
+ </h:form>
+ </h:column>
+
+       </h:dataTable>
+        <h:dataTable value="#{bookBean.total()}" var="myvariable"    
+                     border="2" cellpadding="5" cellspacing="0" style=" background-color: plum" >
+         <h:column >
+         <f:facet name="header"> </f:facet>
+         TOTAL: $ 
+         #{myvariable.toplam}
+         
+       </h:column>
+        </h:dataTable>
+           <h:form  > <h:commandButton  value="CLEAN BASKET"  style=" background-color: white; border-color: black; border:100px; color: purple"  action="#{bookBean.removebasket()}"/>
+            </h:form>
+           
+           <h:form  > <h:commandButton  value="CONFIRM CART"  style=" background-color: white; border-color: black; border:100px; color: purple"  action="basket2"/>
+            </h:form>
+     </div>
+        
+       <div align="center">  
+             <div align="center"  >
+                 <h3><p align = "center" style="font-family:courier;">Follow us on our social media accounts</p></h3>
+                 <h:graphicImage style="width:200px;height:128px;" value="resources/images/logo.PNG"/></div>
+            <h:panelGrid  columns="3" style="height: 20px; width:90px ; border-bottom-color: white" >
+                <h:graphicImage style="width:128px;height:128px;" value="resources/images/facebook.jpg" />
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/instagram.png"/>
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/linkedin.jpg"/>
+                <h:outputLink style="color: red; border-width:200px" value="https://www.facebook.com/" >  FACEBOOK    </h:outputLink>
+                <h:outputLink style="color: red" value="https://www.instagram.com/gulgul_27/" > INSTAGRAM   </h:outputLink>
+                <h:outputLink style="color: red" value="linkedin.com/in/gülşen-kılıç-8ba91316b" > LINKEDIN    </h:outputLink>                       
+                 </h:panelGrid>
+         </div> 
+    </body>
+</html>

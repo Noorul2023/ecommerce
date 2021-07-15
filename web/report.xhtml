@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"  >
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>REPORT </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            body{
+                background-image: url("resources/images/book.jpg") ;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+        </style>
+    </head>
+    <body style="font-family: courier; border: black">
+        
+       <div align="center" > <a href="index.xhtml">
+    <h:graphicImage  value="resources/images/logo.PNG" style="width:500px;height:200px;"/></a></div>  
+
+         <div align="center">      
+         <h2><p align = "center" style="font-family:courier">Please fill in the fields below for searching..</p></h2>   
+       <h:form >  
+        <h:panelGrid columns="2" >      
+        <h:outputText style="background-color: plum" value="  ------- ENTER ORDER NUMBER:------: "/>
+        <h:outputText value=""/>    
+        <h:outputText style="font-style:italic" value="ordernumber:"/>
+        <h:inputText value="#{customersBean.count}"  id="deneme7" /> 
+        <h:outputText value=""/>
+        <h:commandButton class="btn btn-primary btn-xs" value="FIND" style="color: purple" action="totalorder"/>          
+         </h:panelGrid> </h:form>
+         
+         <h:form >  
+        <h:panelGrid columns="2" >
+            
+         <h:outputText style="background-color: plum" value=" SET A TOTAL QUANTITY ORDER RANGE:"/>
+          <h:outputText value=""/>
+         <h:outputText  style="font-style:italic" value="at least:"/>
+        <h:inputText value="#{customersBean.count}"  id="deneme3" />   
+        <h:outputText style="font-style:italic" value="at most:"/>
+         <h:inputText  value="#{customersBean.count2}"  id="deneme4" />   
+        <h:outputText value=""/>
+        <h:commandButton class="btn btn-primary btn-xs" value="FIND" style="color: purple" action="quantityorder"/>      
+         </h:panelGrid> </h:form>   
+         
+         <h:form >  
+        <h:panelGrid columns="2" >
+            
+         <h:outputText style="background-color: plum" value=" --SET A TOTAL COST ORDER RANGE---:"/>
+          <h:outputText value=""/>
+         <h:outputText  style="font-style:italic" value="at least:"/>
+        <h:inputText value="#{customersBean.count}"  id="deneme3" />   
+        <h:outputText style="font-style:italic" value="at most:"/>
+         <h:inputText  value="#{customersBean.count2}"  id="deneme4" />   
+        <h:outputText value=""/>
+        <h:commandButton class="btn btn-primary btn-xs" value="FIND" style="color: purple" action="totalcost"/>      
+         </h:panelGrid> </h:form>  
+         
+         <h:form >  
+        <h:panelGrid columns="2" >
+            
+         <h:outputText style="background-color: plum" value="-------ENTER A PUBLISHER------- :"/>
+         <h:outputText value=""/>
+        
+        <h:outputText style="font-style:italic" value="publisher:"/>
+        <h:inputText value="#{bookBean.controlBookPub}"  id="deneme7" /> 
+        <h:outputText value=""/>
+        <h:commandButton class="btn btn-primary btn-xs" value="FIND" style="color: purple" action="pub"/>          
+         </h:panelGrid> </h:form>   
+         
+          <h:form >  
+        <h:panelGrid columns="2" >
+            
+         <h:outputText style="background-color: plum" value="--------List of below average books:---------"/>
+         <h:commandButton class="btn btn-primary btn-xs" value="FIND" style="color: purple" action="avg"/>     
+        
+         </h:panelGrid> </h:form>   
+         </div>
+        
+        
+        <div align="center">  
+             <div align="center"  >
+                 <h3><p align = "center" style="font-family:courier;">Follow us on our social media accounts</p></h3>
+             </div>
+            <h:panelGrid  columns="3" style="height: 20px; width:90px" >
+                <h:graphicImage style="width:128px;height:128px;" value="resources/images/facebook.jpg" />
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/instagram.png"/>
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/linkedin.jpg"/>
+                <h:outputLink style="color: black"  value="https://www.facebook.com/" >  FACEBOOK    </h:outputLink>
+                <h:outputLink style="color: black" value="https://www.instagram.com/gulgul_27/" > INSTAGRAM   </h:outputLink>
+                <h:outputLink style="color: black" value="linkedin.com/in/gülşen-kılıç-8ba91316b" > LINKEDIN    </h:outputLink>                       
+                 </h:panelGrid>
+         </div>
+    </body>
+</html>

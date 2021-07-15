@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+    <meta http-equiv="refresh" content="60" />
+    <head>
+        <title>REGİSTER</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            body{
+                background-image: url("resources/images/kitap3.jpg") ;
+                background-repeat: no-repeat;
+                 background-size: cover;
+            }
+        </style>
+    </head>
+    <body style="font-family: courier; border: black">
+<div align="center" > <a href="index.xhtml">
+    <h:graphicImage  value="resources/images/logo.PNG" style="width:500px;height:300px;"/></a></div>        
+         <div align="center" > 
+         <h2><p align = "center" style="font-family:courier;">Please fill in the fields below for register..</p></h2> 
+         <h:form >  
+         <h:panelGrid columns="3" >
+
+<h:outputText value="TcNumber:"/>
+<h:inputText id="tcnoInputText" required="true"
+requiredMessage="Please enter your TC number"
+value="#{customersBean.tcNo}"
+validatorMessage="Name must be fewer than 11 characters">
+<f:validateLength maximum="11" />
+</h:inputText>
+<h:message for="nameInputText"/>
+
+<h:outputText value="Name:"/>
+<h:inputText id="nameInputText" required="true"
+requiredMessage="Please enter your name"
+value="#{customersBean.firstname}"
+validatorMessage="Name must be fewer than 50 characters">
+<f:validateLength maximum="50" />
+</h:inputText>
+<h:message for="nameInputText"/>
+            
+<h:outputText value="LastName:"/>
+<h:inputText id="lastnameInputText" required="true"
+requiredMessage="Please enter your lastname"
+value="#{customersBean.lastname}"
+validatorMessage="LastName must be fewer than 50 characters">
+<f:validateLength maximum="50" />
+</h:inputText>
+<h:message for="nameInputText"/>
+
+<h:outputText value="E-mail:" />
+ <h:inputText id="emailInputText" required="true"
+ requiredMessage="Please enter a valid e-mail address"
+ value="#{customersBean.mail}"
+ validatorMessage="Invalid e-mail address format">
+<f:validateRegex pattern=
+"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+ </h:inputText>
+ <h:message for="emailInputText" />
+ 
+
+
+ <h:outputText value="Password:"/>
+<h:inputText id="passwordInputText" required="true"
+requiredMessage="Please enter  password"
+value="#{customersBean.password}"
+validatorMessage="Name must be fewer than 10 characters">
+<f:validateLength maximum="10" />
+</h:inputText>
+<h:message for="nameInputText"/>
+
+             </h:panelGrid> 
+             <h:commandButton value="Submit" action="#{customersBean.ekle()}" onclick = "alert('REGISTER PROCESS SUCCESSFUL.!');"/>
+          <h:outputText value="#{Bean.save}" escape="false"/></h:form></div>
+  <div align="center">  
+             <div align="center"  >
+                 <h3><p align = "center" style="font-family:courier;">Follow us on our social media accounts</p></h3>
+             </div>
+            <h:panelGrid  columns="3" style="height: 20px; width:90px" >
+                <h:graphicImage style="width:128px;height:128px;" value="resources/images/facebook.jpg" />
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/instagram.png"/>
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/linkedin.jpg"/>
+                <h:outputLink style="color: black"  value="https://www.facebook.com/" >  FACEBOOK    </h:outputLink>
+                <h:outputLink style="color: black" value="https://www.instagram.com/gulgul_27/" > INSTAGRAM   </h:outputLink>
+                <h:outputLink style="color: black" value="linkedin.com/in/gülşen-kılıç-8ba91316b" > LINKEDIN    </h:outputLink>                       
+                 </h:panelGrid>
+         </div>
+    </body>
+</html>

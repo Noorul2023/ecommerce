@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"  >
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>LOG IN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            body{
+                background-image: url("resources/images/book3.jpg") ;
+                background-repeat: no-repeat;
+                 background-size: cover;
+            }
+        </style>
+    </head>
+    <body style="font-family: courier; border: black">
+       <div align="right" > <a href="index.xhtml">
+    <h:graphicImage  value="resources/images/logo.PNG" style="width:500px;height:300px;"/></a></div>
+      
+       <div align="right" > 
+<h:form >  
+        <h:panelGrid columns="2" >         
+            <h:outputText  value="Please fill in the fields below for login.. "  style=" background-color: plum"/>
+        <h:outputText value=""/>
+        <h:outputText  style="font-style:italic" value="mail :"/>
+        <h:inputText value="#{customersBean.mail}" id="deneme" />      
+        <h:outputText style="font-style:italic" value="password:" /> 
+        <h:inputText value="#{customersBean.password}" id="deneme2"     />    
+        <h:outputText value=""/>
+        <h:commandButton class="btn btn-primary btn-xs" value="LOGIN" style="color: purple"  action="#{customersBean.logIn()}"/>      
+        </h:panelGrid> </h:form>   
+         
+       </div>
+       
+
+      <div align="right">  
+             <div align="right"  >
+                 <h3><p align = "right" style="font-family:courier;">Follow us on our social media accounts</p></h3>
+             </div>
+            <h:panelGrid  columns="3" style="height: 20px; width:90px" >
+                <h:graphicImage style="width:128px;height:128px;" value="resources/images/facebook.jpg" />
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/instagram.png"/>
+         <h:graphicImage style="width:128px;height:128px;" value="resources/images/linkedin.jpg"/>
+                <h:outputLink style="color: black"  value="https://www.facebook.com/" >  FACEBOOK    </h:outputLink>
+                <h:outputLink style="color: black" value="https://www.instagram.com/gulgul_27/" > INSTAGRAM   </h:outputLink>
+                <h:outputLink style="color: black" value="linkedin.com/in/gülşen-kılıç-8ba91316b" > LINKEDIN    </h:outputLink>                       
+                 </h:panelGrid>
+         </div>
+    </body>
+</html>
